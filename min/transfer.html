@@ -9,7 +9,7 @@
     <title>Transfer IP Rights</title>
   </head>
   <body background="img.jpg">
-    <div class="container-fluid">
+    <div class="container-fluid2">
       <h1 style="color: white;">Transfer IP Rights</h1>
       <form onsubmit="callBlockchain()">
         <div class="form-group">
@@ -44,6 +44,7 @@
 
     <script type="text/javascript">
       function callBlockchain() {
+        window.confirm("Your request has been added to the blockchain!");
         console.log("calling blockchain API");
         $.ajax({
           type: "POST",
