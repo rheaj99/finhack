@@ -10,11 +10,11 @@
   <body>
     <div class="container-fluid">
       <h1>Transfer IP Rights</h1>
-      <form>
+      <form onsubmit="callBlockchain()">
         <div class="form-group">
           <label for="ipright">IP Right</label>
           <select class="form-control" id="ipright">
-            <option>Mickey Mouse Face &#8226; T-shirt &#8226; Hong Kong &#8226; June 18, 2018 - July 18, 2018</option>
+            <option>Mickey Mouse Character Head &#8226; T-shirt &#8226; Hong Kong &#8226; June 18, 2018 - July 18, 2018</option>
             <option>Nike Swoosh Logo &#8226; Baseball cap &#8226; Hong Kong &#8226; July 1, 2018 - July 15, 2018</option>
             <option>Batman Symbol &#8226; Any &#8226; Hong Kong &#8226; January 1, 2017 - January 1, 2019</option>
           </select>
@@ -30,9 +30,24 @@
         <button type="submit" class="btn btn-primary">Confirm</button>
       </form>
     </div>
-
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+      function callBlockchain() {
+        console.log("calling blockchain API");
+        $.ajax({
+          type: "POST",
+          url: "http://localhost:8000/myblockchainurl",
+          data: {},
+          success: function(data) { console.log(data); },
+          dataType: "json"
+        });
+      }
+    </script>
   </body>
 </html>
