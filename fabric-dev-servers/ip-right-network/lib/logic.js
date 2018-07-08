@@ -8,7 +8,7 @@
 function tradeIpright(trade) {
     trade.ipRight.owner = trade.newOwner
 
-    return getAssetRegistry('org.acme.mynetwork.IpRight')
+    return getAssetRegistry('org.example.biznet.IpRight')
         .then(function (assetRegistry) {
             return assetRegistry.update(trade.ipRight);
         });
