@@ -12,12 +12,18 @@
 }
 
 
+.logo{
+	position:absolute;
+	left:0;
+	top:0;
+}
+
 .container-fluid1{
     position: absolute;
     height: 200px;
     width: 1200px;
     margin: -150px 0 0 -600px;
-    top: 40%;
+    top: 50%;
     left: 50%;
 }
 
