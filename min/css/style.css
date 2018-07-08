@@ -1,0 +1,31 @@
+.container-fluid{
+    position: absolute;
+    height: 200px;
+    width: 800px;
+    margin: -150px 0 0 -400px;
+    top: 50%;
+    left: 50%;
+}
+
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    background-color: #3F3535 !important;
+}
+
+
+.container-fluid1{
+    position: absolute;
+    height: 200px;
+    width: 1200px;
+    margin: -150px 0 0 -600px;
+    top: 40%;
+    left: 50%;
+}
+
+.container-fluid2{
+    position: absolute;
+    height: 200px;
+    width: 800px;
+    margin: -150px 0 0 -400px;
+    top: 40%;
+    left: 50%;
+}

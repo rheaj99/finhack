@@ -5,25 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
 
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
     <title>Transfer IP Rights</title>
   </head>
-  <body>
-    <div class="container-fluid">
-      <h1>Transfer IP Rights</h1>
+  <body background="img.jpg">
+    <div class="container-fluid2">
+      <h1 style="color: white;">Transfer IP Rights</h1>
       <form onsubmit="callBlockchain()">
         <div class="form-group">
-          <label for="ipright">IP Right</label>
+          <label for="ipright" style="color: white;">IP Right</label>
           <select class="form-control" id="ipright">
-            <option>Mickey Mouse Character Head &#8226; T-shirt &#8226; Hong Kong &#8226; June 18, 2018 - July 18, 2018</option>
+            <option>Mickey Mouse Character Head&#8226; T-shirt &#8226; Hong Kong &#8226; June 18, 2018 - July 18, 2018</option>
             <option>Nike Swoosh Logo &#8226; Baseball cap &#8226; Hong Kong &#8226; July 1, 2018 - July 15, 2018</option>
             <option>Batman Symbol &#8226; Any &#8226; Hong Kong &#8226; January 1, 2017 - January 1, 2019</option>
           </select>
         </div>
         <div class="form-group">
-          <label for="ownerid">Transfer to</label>
+          <label for="ownerid" style="color: white;">Transfer from</label>
           <input type="text" class="form-control" id="ownerid" placeholder="Client ID">
         </div>
-        <div class="form-group">
+        <div class="form-group" style="color: white;">
+          <label for="userid">Transfer to</label>
+          <input type="text" class="form-control" id="userid" placeholder="Client ID">
+        </div>
+        <div class="form-group" style="color: white;">
           <label for="exampleInputPassword1">Password</label>
           <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
         </div>
@@ -39,6 +44,7 @@
 
     <script type="text/javascript">
       function callBlockchain() {
+        window.confirm("Your request has been added to the blockchain!");
         console.log("calling blockchain API");
         $.ajax({
           type: "POST",
