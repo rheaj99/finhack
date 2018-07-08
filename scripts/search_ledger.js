@@ -12,7 +12,7 @@ function addNewTrader(userCardName, tid) {
 	// connect using the 'newUserCard', create an asset, add it to a registry and get all assets. 
 	try {
 	  await businessNetworkConnection.connect(userCardName);
-      var factory = getFactory();
+      var factory = businessNetworkConnection.getFactory();
 	  let trader = factory.newResource('org.acme.mynetwork','Trader', tid);
 	  await assestRegistry.add(trader);
 
